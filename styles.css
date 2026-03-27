@@ -1,0 +1,186 @@
+:root {
+    --primary-tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--charcoal-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Card Layout */
+.container {
+    background: var(--white);
+    max-width: 930px;
+    display: flex;
+    flex-direction: column-reverse;
+    /* Mobile: Image on top */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content-section {
+    padding: 40px 24px;
+    flex: 1.2;
+}
+
+/* Mobile Image version
+.image-section {
+  flex: 1;
+  background-image: url('./illustration-sign-up-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  border-radius: 18px;
+}
+
+/* Desktop Image version 
+@media (min-width: 768px) {
+  .image-section {
+    background-image: url('./illustration-sign-up-desktop.svg');
+    border-radius: 20px;
+    min-height: 100%;
+  }
+} */
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    color: var(--dark-slate-grey);
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--charcoal-grey);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* List Items */
+ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+/* Form Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--dark-slate-grey);
+}
+
+.error-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-tomato);
+    display: none;
+}
+
+input {
+    padding: 16px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: var(--dark-slate-grey);
+}
+
+input.error-state {
+    border-color: var(--primary-tomato);
+    background-color: hsla(4, 100%, 67%, 0.15);
+    color: var(--primary-tomato);
+}
+
+button {
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #FF527B, #FF6A3A);
+    box-shadow: 0 10px 20px rgba(255, 106, 58, 0.4);
+}
+
+/* Success State */
+.success-card {
+    display: none;
+    background: var(--white);
+    padding: 40px;
+    max-width: 550px;
+    border-radius: 40px;
+}
+
+.success-card img {
+    width: 64px;
+    margin-bottom: 40px;
+}
+
+.success-card h2 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    line-height: 1;
+}
+
+/* Desktop Media Query */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        border-radius: 36px;
+        padding: 24px;
+    }
+
+    .content-section {
+        padding: 48px 40px;
+    }
+
+    .image-section {
+        background-image: url('https://raw.githubusercontent.com/fm-challenges/newsletter-signup-form/main/assets/images/illustration-sign-up-desktop.svg');
+        border-radius: 16px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
