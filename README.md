@@ -38,7 +38,8 @@ This is A screenshot of the live Website.
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Newsletter](https://newsletter-sepia-five.vercel.app/)
+- This is the live Site url. I used vercel to deploy this project.
 
 ### Built with
 
